@@ -6,7 +6,8 @@ class Game extends Component {
    this.state = {
      collums: 4,
      winCombination:[],
-     gameCombination:[]
+     gameCombination:[],
+     test:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
    };
  }
 
@@ -16,22 +17,47 @@ class Game extends Component {
 }
 
 move(e){
+  let arr = this.state.gameCombination,
+  num1=arr.indexOf(0)
+
   switch (e.keyCode) {
     case 39:
-      console.log('left');
+      this.swapCells(num1,num1-1);
       break;
     case 37:
-      console.log('right');
+      this.swapCells(num1, num1+1);
       break;
     case 40:
-      console.log('top');
+      this.swapCells(num1, num1-4);
       break;
     case 38:
+      this.swapCells(num1, num1+4);
       console.log('down');
       break;
     default: console.log(e.keyCode); return false;
 
   }
+}
+
+checkWin(){
+  let arr = this.state.gameCombination.slice(0, 16);
+  return  this.arr.every((item,index)=>{
+    if (item===index+1) {
+      return true
+    }
+
+    return false;
+  })
+}
+
+swapCells(arg1, arg2){
+  let arr= this.state.gameCombination,
+  elem1 = arr[arg1],
+  newElem1=arr[arg1] = arr[arg2],
+  newElem2=arr[arg2] = elem1;
+  return  this.setState({
+      gameCombination: arr
+  })
 }
 
  createBoard(){
