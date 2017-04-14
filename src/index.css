@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.board{
+  width: 480px;
+}
+
+.game-block{
+  background-color: grey;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hole{
+  background-color: white;
+  color: white;
+}
