@@ -1,24 +1,58 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
-
-.board{
-  width: 480px;
-}
-
-.game-block{
-  background-color: grey;
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  font-size: 2rem;
+  font-family: 'Asar', serif;
+  background: #FFDA56;
   text-align: center;
 }
 
+.greeting{
+  display: none;
+  position: absolute;
+  color: red;
+  font-size: 3rem;
+  top: 150px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+}
+
+.change-level-button button{
+  margin: 20px 15px 20px;
+  border-radius: 7px;
+  border:  solid 2px gray;
+  color: gray;
+  background: #FFDA56;
+  width: 80px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.board{
+  width: 560px;
+  display: inline-block;
+}
+
+.game-block{
+  border:  solid 2px gray;
+  color: gray;
+  display: inline-block;
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  text-align: center;
+}
+
+.game-block h1{
+  font-size: 1.5rem;
+  padding-top: 25px;
+  margin: 0;
+}
+
 .hole{
-  background-color: white;
-  color: white;
+  border: none;
+  background-color: #FFDA56;
+  color: #FFDA56;
 }
